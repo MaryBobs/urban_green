@@ -21,4 +21,27 @@ def save()
   @id = SqlRunner.run(sql,values)[0]['id'].to_i
 end
 
+def update()
+  sql = "UPDATE stock SET (product_id, supplier_id, stock_quantity, buying_cost, selling_price)
+  = ($1, $2, $3, $4, $5) WHERE id = $6"
+  values = [@product_id, @supplier_id, @stock_quantity, @buying_cost, @selling_price, @id]
+  SqlRunner.run(sql, values)
+end
+
+def self.all()
+  sql = "SELECT * FROM stock"
+  return SqlRunner.run(sql).map{|stock| Stock.new(stock)}
+end
+
+  def self.delete_all()
+    sql = "DELETE FROM stock"
+    SqlRunner.run(sql)
+  end
+
+  def self.delete_by_id(id)
+    sql = "DELETE FROM stock WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
 end

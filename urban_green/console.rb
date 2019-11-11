@@ -29,11 +29,11 @@ all_suppliers = Supplier.all()
 
 product1 = Product.new(
   {"name" => "eggs", "description" => "6 per box",
-  "supplier_id" => 10, "category_id" => 71})
+  "supplier_id" => 10, "category_id" => 1})
 
 product2 = Product.new(
   {"name" => "tinned beans", "description" => "mixed beans",
-  "supplier_id" => 11, "category_id" => 72})
+  "supplier_id" => 11, "category_id" => 2})
 
 product1.save()
 product2.save()

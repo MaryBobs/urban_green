@@ -26,10 +26,19 @@ class Product
   end
 
   def update()
-    sql = "UPDATE products SET (name, description, supplier_id, category_id)
+    sql = "UPDATE products SET (name, description, supplier_id, category_id, stock_quantity, buying_cost, selling_price)
     = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
     values = [@name, @description, @supplier_id, @category_id, @stock_quantity, @buying_cost, @selling_price, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def supplier_name()
+    sql = "SELECT * FROM suppliers WHERE id = $1"
+    values = [@supplier_id]
+    results = SqlRunner.run(sql, values)
+    supplier_hash = results[0]
+    supplier = Supplier.new(supplier_hash)
+    return supplier
   end
 
   def self.all()

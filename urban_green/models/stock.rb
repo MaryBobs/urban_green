@@ -28,6 +28,29 @@ def update()
   SqlRunner.run(sql, values)
 end
 
+def supplier()
+  sql = "SELECT * FROM suppliers WHERE id = $1"
+  values = [@supplier_id]
+  results = SqlRunner.run(sql, values)
+  supplier_hash = results[0]
+  supplier = Supplier.new(supplier_hash)
+  return supplier
+end
+
+def product()
+  sql = "SELECT * FROM products WHERE id = $1"
+  values = [@product_id]
+  results = SqlRunner.run(sql, values)
+  product_hash = results[0]
+  product = Product.new(product_hash)
+  return product
+end
+
+def markup()
+  result = (@selling_price.to_f - @buying_cost.to_f) * 100
+  return result
+end
+
 def self.all()
   sql = "SELECT * FROM stock"
   return SqlRunner.run(sql).map{|stock| Stock.new(stock)}

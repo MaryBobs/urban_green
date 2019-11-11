@@ -25,8 +25,8 @@ CREATE TABLE products (
 
 CREATE TABLE stock (
   id SERIAL8 PRIMARY KEY,
-  product_id INT8 REFERENCES products(id),
-  supplier_id INT8 REFERENCES suppliers(id),
+  product_id INT8 REFERENCES products(id) ON DELETE CASCADE,
+  supplier_id INT8 REFERENCES suppliers(id) ON DELETE CASCADE,
   stock_quantity INT,
   buying_cost DECIMAL(10,2),
   selling_price DECIMAL(10,2)

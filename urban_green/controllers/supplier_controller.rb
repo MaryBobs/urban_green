@@ -17,12 +17,27 @@ get '/suppliers/:id' do
   erb(:'suppliers/show')
 end
 
-# get '/suppliers/:id/edit' do
-#   @supplier = Supplier.find_by_id(params['id'])
-#   erb(:"suppliers/edit")
-# end
+get '/suppliers/:id/edit' do
+  @supplier = Supplier.find_by_id(params['id'])
+  erb(:"suppliers/edit")
+end
+
+get '/suppliers/:id/delete' do
+  @supplier = Supplier.find_by_id(params['id'])
+  erb(:"suppliers/delete")
+end
 
 post '/suppliers' do
   Supplier.new(params).save
+  redirect to '/suppliers'
+end
+
+post '/suppliers/:id' do
+  Supplier.new(params).update
+  redirect to "/suppliers/#{params['id']}"
+end
+
+post '/suppliers/:id' do
+  Supplier.delete(params['id'])
   redirect to '/suppliers'
 end

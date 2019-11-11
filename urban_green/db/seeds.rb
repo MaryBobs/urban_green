@@ -1,6 +1,7 @@
 require_relative("../models/category.rb")
 require_relative("../models/supplier.rb")
 require_relative("../models/product.rb")
+require_relative("../models/stock.rb")
 
 category1 = Category.new({"name" => "Groceries - dry goods"})
 category2 = Category.new({"name" => "Fresh Food"})
@@ -25,14 +26,19 @@ supplier1.save()
 supplier2.save()
 
 product1 = Product.new(
-  {"name" => "eggs", "description" => "6 per box",
-  "supplier_id" => 2, "category_id" => 2, "stock_quantity" => 20,
-  "buying_cost" => 0.50, "selling_price" => 1.20})
+  {"name" => "eggs", "description" => "6 per box", "category_id" => 2})
 
 product2 = Product.new(
-  {"name" => "tinned beans", "description" => "mixed beans",
-  "supplier_id" => 1, "category_id" => 1, "stock_quantity" => 30,
-  "buying_cost" => 0.30, "selling_price" => 0.80})
+  {"name" => "tinned beans", "description" => "mixed beans", "category_id" => 1})
 
 product1.save()
 product2.save()
+
+stock1 = Stock.new(
+  {"product_id" => 1, "supplier_id" => 2, "stock_quantity" => 200, "buying_cost" => 0.80, "selling_price" => 1.20})
+
+stock2 = Stock.new(
+  {"product_id" => 2, "supplier_id" => 1, "stock_quantity" => 500, "buying_cost" => 0.60, "selling_price" => 0.90})
+
+stock1.save()
+stock2.save()

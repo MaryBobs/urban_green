@@ -14,13 +14,5 @@
     <% end %>
   </select>
 
-  <label for="supplier_select">Select Supplier:</label>
-  <select id="supplier_select" name="supplier_id">
-    <% for supplier in @suppliers %>
-    <option value=<%= supplier.id %>><%= supplier.name %></option>
-    <% end %>
-  </select>
-
-
   <input type="submit" name="Save New Product">
 </form>

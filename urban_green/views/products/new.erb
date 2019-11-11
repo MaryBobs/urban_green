@@ -1,0 +1,26 @@
+<h2>Add new Product</h2>
+
+<form action="/products" method="post">
+  <label for="name">Product Name</label>
+  <input type="text" name="name" id="name">
+
+  <label for="description">Product Details</label>
+  <input type="text" name="description" id="description">
+
+  <label for="category_select">Select Category:</label>
+  <select id="category_select" name="category_id">
+    <% for category in @categories %>
+    <option value=<%= category.id %>><%= category.name %></option>
+    <% end %>
+  </select>
+
+  <label for="supplier_select">Select Supplier:</label>
+  <select id="supplier_select" name="supplier_id">
+    <% for supplier in @suppliers %>
+    <option value=<%= supplier.id %>><%= supplier.name %></option>
+    <% end %>
+  </select>
+
+
+  <input type="submit" name="Save New Product">
+</form>

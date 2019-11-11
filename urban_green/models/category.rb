@@ -35,7 +35,7 @@ class Category
   def self.find_by_id(id)
     sql = "SELECT * FROM categories WHERE id = $1"
     values = [id]
-    return Supplier.new(SqlRunner.run(sql, values)[0]])
+    return Supplier.new(SqlRunner.run(sql, values)[0])
   end
 
   def self.delete_all()

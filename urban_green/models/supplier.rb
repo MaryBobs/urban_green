@@ -37,7 +37,7 @@ class Supplier
   def self.find_by_id(id)
     sql = "SELECT * FROM suppliers WHERE id = $1"
     values = [id]
-    SqlRunner.run(sql,values).map{|supplier| Supplier.new(supplier)}
+    return Supplier.new(SqlRunner.run(sql, values)[0]])
   end
 
   def self.delete(id)

@@ -1,5 +1,6 @@
 <h1>Suppliers</h1>
 
-<h2>Update supplier</h2>
-
+<% for supplier in @suppliers %>
+<h2><a href="/suppliers/<%= supplier.id %>"><%= supplier.name %></a></h2>
+<% end %>
 <h2><a href="/suppliers/new">Add new supplier</a></h2>

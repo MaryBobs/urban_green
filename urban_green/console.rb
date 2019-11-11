@@ -4,6 +4,7 @@ require_relative("./models/supplier.rb")
 
 Category.delete_all()
 
+
 category1 = Category.new({"name" => "Groceries - dry goods"})
 category2 = Category.new({"name" => "Fresh Food"})
 
@@ -22,6 +23,8 @@ supplier2 = Supplier.new(
 
 supplier1.save()
 supplier2.save()
+
+all_suppliers = Supplier.all()
 
 binding.pry
 nil

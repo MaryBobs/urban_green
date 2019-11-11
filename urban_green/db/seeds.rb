@@ -11,3 +11,13 @@ category2.save()
 category3.save()
 category4.save()
 category5.save()
+
+supplier1 = Supplier.new(
+  {"name" => "Groceries 2 U", "contact_name" => "Jeff Onions",
+    "email" => "orders@groceries2u.com", "phone_number" => "0131 123 4567"})
+supplier2 = Supplier.new(
+  {"name" => "East Lothian Farms", "contact_name" => "Pete Chicken",
+    "email" => "sales@elf.com", "phone_number" => "0131 290 1234"})
+
+supplier1.save()
+supplier2.save()

@@ -1,4 +1,4 @@
-DROP TABLE stock;
+-- DROP TABLE stock;
 DROP TABLE products;
 DROP TABLE suppliers;
 DROP TABLE categories;
@@ -21,14 +21,17 @@ CREATE TABLE products (
   name VARCHAR(255),
   description TEXT,
   category_id INT8 REFERENCES categories(id),
-  supplier_id INT4 REFERENCES suppliers(id)
+  supplier_id INT4 REFERENCES suppliers(id),
+  stock_quantity INT4,
+  buying_cost DECIMAL(10,2),
+  selling_price DECIMAL(10,2)
 );
 
-CREATE TABLE stock (
-  id SERIAL8 PRIMARY KEY,
-  product_id INT8 REFERENCES products(id),
-  quantity INT,
-  buying_cost DECIMAL(10,2),
-  selling_price DECIMAL(10,2),
-  reorder_level INT
-);
+-- CREATE TABLE stock (
+--   id SERIAL8 PRIMARY KEY,
+--   product_id INT8 REFERENCES products(id),
+--   quantity INT,
+--   buying_cost DECIMAL(10,2),
+--   selling_price DECIMAL(10,2),
+--   reorder_level INT
+-- );

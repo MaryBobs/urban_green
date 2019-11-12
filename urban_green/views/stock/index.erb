@@ -17,12 +17,14 @@
     <th>Price</th>
     <th></th>
     <th>Markup</th>
+    <th></th>
+    <th>Edit</th>
     </tr>
     <% for stock in @stock %>
     <tr>
-      <td><a href="/stock/<%= stock.id %>"><%= stock.product.name %></a></td>
+      <td><a href="/products/<%= stock.product_id %>"><%= stock.product.name %></a></td>
       <td>|</td>
-      <td> <%= stock.supplier.name %></td>
+      <td><a href="/suppliers/<%= stock.supplier_id %>"> <%= stock.supplier.name %></a></td>
       <td>|</td>
       <td> <%= stock.product.description %></td>
       <td>|</td>
@@ -33,6 +35,8 @@
       <td> <%= stock.selling_price %></td>
       <td>|</td>
       <td> <%= stock.markup.round %>%</td>
+      <td>|</td>
+      <td><a href="/stock/<%= stock.id %>/edit">Edit</a></td>
     </tr>
   <% end %>
 </table>

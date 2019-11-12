@@ -10,18 +10,26 @@ get '/stock' do
   erb(:'stock/index')
 end
 
-get '/stock' do
-  @stock = Stock.find_by_id(params['id'])
-  erb(:'stock/show')
-end
-
 get '/stock/new' do
   @products = Product.all()
   @suppliers = Supplier.all()
   erb(:'stock/new')
 end
 
+get '/stock/:id/edit' do
+  @stock = Stock.find_by_id(params['id'])
+  @products = Product.all()
+  @suppliers = Supplier.all()
+  erb(:"stock/edit")
+end
+
+
 post '/stock' do
   Stock.new(params).save
   redirect to '/stock'
+end
+
+post '/stock/:id' do
+  Stock.new(params).update
+  redirect to "/stock"
 end

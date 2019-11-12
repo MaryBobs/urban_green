@@ -51,10 +51,16 @@ def markup()
   return result
 end
 
-def self.all()
-  sql = "SELECT * FROM stock"
-  return SqlRunner.run(sql).map{|stock| Stock.new(stock)}
-end
+  def self.all()
+    sql = "SELECT * FROM stock"
+    return SqlRunner.run(sql).map{|stock| Stock.new(stock)}
+  end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM stock WHERE id = $1"
+    values = [id]
+    return Stock.new(SqlRunner.run(sql, values)[0])
+  end
 
   def self.delete_all()
     sql = "DELETE FROM stock"

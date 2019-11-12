@@ -41,10 +41,3 @@ post '/suppliers/:id/delete' do
   Supplier.find_by_id(params['id']).delete
   redirect to '/suppliers'
 end
-
-
-# post '/students/:id/delete' do
-#   student = Student.find(params['id'])
-#   student.delete
-#   redirect to '/students'
-# end

@@ -1,0 +1,9 @@
+<h1>Are you sure you want to delete this product:</h1>
+
+<form action="/products/<%= @product.id %>/delete" method="post">
+  <input type="submit" name="delete" value="Yes, delete Product">
+</form>
+
+<form action="/products">
+  <input type="submit" name="Product list" value="No, return to Product list">
+</form>

@@ -22,8 +22,14 @@ class Product
 
   def update()
     sql = "UPDATE products SET (name, description, category_id)
-    = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+    = ($1, $2, $3) WHERE id = $4"
     values = [@name, @description, @category_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM products WHERE id = $1"
+    values = [@id]
     SqlRunner.run(sql, values)
   end
 
@@ -39,6 +45,12 @@ class Product
   def self.all()
     sql = "SELECT * FROM products"
     return SqlRunner.run(sql).map{|product| Product.new(product)}
+  end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM products WHERE id = $1"
+    values = [id]
+    return Product.new(SqlRunner.run(sql, values)[0])
   end
 
 end

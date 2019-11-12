@@ -1,5 +1,7 @@
 <h1>Products</h1>
 
-<h2>Update product</h2>
+<% for product in @products %>
+<h2><a href="/products/<%= product.id %>"><%= product.name %></a></h2>
+<% end %>
 
 <h2><a href='products/new'>Add new product</a></h2>

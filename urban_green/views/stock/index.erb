@@ -12,9 +12,22 @@
     <th></th>
     <th>Description</th>
     <th></th>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     <th>Category</th>
     <th></th>
+    <th>Stock Level</th>
+=======
+=======
+>>>>>>> parent of 9c551ff... inventory styling
     <th>Stock</th>
+>>>>>>> parent of 9c551ff... inventory styling
+=======
+    <th>Category</th>
+    <th></th>
+    <th>Stock Level</th>
+>>>>>>> 9fc8526b295675c334ef7b2e26ca714b8361d28c
     <th></th>
     <th>Cost</th>
     <th></th>
@@ -35,11 +48,11 @@
       <td> <%= stock.product.category_name.name %></td>
       <td>|</td>
       <% if stock.stock_quantity > 100 %>
-      <td><%= stock.stock_quantity %></td>
+      <td bgcolor="#A9FFCB"><%= stock.stock_quantity %></td>
       <% elsif stock.stock_quantity == 0 %>
-      <td bgcolor="red"><%= stock.stock_quantity %></td>
+      <td bgcolor="#F40028"><%= stock.stock_quantity %></td>
       <% else  %>
-      <td bgcolor="yellow"><%= stock.stock_quantity %></td>
+      <td bgcolor="#FFCB47"><%= stock.stock_quantity %></td>
       <% end %>
       <td>|</td>
       <td> <%= stock.buying_cost %></td>

@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   font-size: 25px;
-  color: #BEE7E8
 }
 
 
@@ -76,4 +75,60 @@
 a {
   text-decoration: none;
   color: #A0D2DB;
+}
+
+.inventory {
+  display: flex;
+  justify-content: flex-start space-around;
+  padding: 20px;
+}
+
+.inventory-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.inventory-table {
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+table a {
+color: #594157;
+align-items: center;
+}
+
+th {
+  border-bottom: 10px solid;
+  color: #594157;
+}
+
+.edit a {
+  border: solid 2px #594157;
+  padding: 1px;
+  border-radius: 10px;
+  color: #594157;
+  font-size: 19px;
+  margin-left: 5px;
+  background-color: #A0D2DB;
+}
+
+tr  {
+  color: #594157;
+  border-color: black;
+  border-bottom: solid;
+}
+
+.button a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid 2px #594157;
+  padding: 1px;
+  border-radius: 10px;
+  color: #594157;
+  font-size: 19px;
+  margin: 10px;
+  padding: 20px;
 }

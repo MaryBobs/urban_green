@@ -1,7 +1,9 @@
-<h1>Inventory</h1>
 
-<h2><a href='/stock/new'>Add new stock</a></h2>
-
+<div class="inventory">
+<div class="inventory-menu">
+<h2 class="button"><a href='/stock/new'>Add new stock</a></h2>
+</div>
+<div class="inventory-table">
 <table>
   <tr>
     <th>Product</th>
@@ -9,6 +11,8 @@
     <th>Supplier</th>
     <th></th>
     <th>Description</th>
+    <th></th>
+    <th>Category</th>
     <th></th>
     <th>Stock</th>
     <th></th>
@@ -28,6 +32,8 @@
       <td>|</td>
       <td> <%= stock.product.description %></td>
       <td>|</td>
+      <td> <%= stock.product.category_name.name %></td>
+      <td>|</td>
       <% if stock.stock_quantity > 100 %>
       <td><%= stock.stock_quantity %></td>
       <% elsif stock.stock_quantity == 0 %>
@@ -42,7 +48,9 @@
       <td>|</td>
       <td> <%= stock.markup.round %>%</td>
       <td>|</td>
-      <td><a href="/stock/<%= stock.id %>/edit">Edit</a></td>
+      <td class="edit"><a href="/stock/<%= stock.id %>/edit">Edit</a></td>
     </tr>
   <% end %>
 </table>
+</div>
+</div>

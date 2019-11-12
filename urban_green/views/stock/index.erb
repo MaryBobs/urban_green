@@ -14,7 +14,7 @@
     <th></th>
     <th>Category</th>
     <th></th>
-    <th>Stock</th>
+    <th>Stock Level</th>
     <th></th>
     <th>Cost</th>
     <th></th>
@@ -35,11 +35,11 @@
       <td> <%= stock.product.category_name.name %></td>
       <td>|</td>
       <% if stock.stock_quantity > 100 %>
-      <td><%= stock.stock_quantity %></td>
+      <td bgcolor="#A9FFCB"><%= stock.stock_quantity %></td>
       <% elsif stock.stock_quantity == 0 %>
-      <td bgcolor="red"><%= stock.stock_quantity %></td>
+      <td bgcolor="#F40028"><%= stock.stock_quantity %></td>
       <% else  %>
-      <td bgcolor="yellow"><%= stock.stock_quantity %></td>
+      <td bgcolor="#FFCB47"><%= stock.stock_quantity %></td>
       <% end %>
       <td>|</td>
       <td> <%= stock.buying_cost %></td>

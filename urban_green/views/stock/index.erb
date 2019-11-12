@@ -28,7 +28,13 @@
       <td>|</td>
       <td> <%= stock.product.description %></td>
       <td>|</td>
-      <td> <%= stock.stock_quantity %></td>
+      <% if stock.stock_quantity > 100 %>
+      <td><%= stock.stock_quantity %></td>
+      <% elsif stock.stock_quantity == 0 %>
+      <td bgcolor="red"><%= stock.stock_quantity %></td>
+      <% else  %>
+      <td bgcolor="yellow"><%= stock.stock_quantity %></td>
+      <% end %>
       <td>|</td>
       <td> <%= stock.buying_cost %></td>
       <td>|</td>

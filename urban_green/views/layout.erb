@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <title>Urban Green</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/tables.css">
+    <link rel="stylesheet" type="text/css" href="styles/forms.css">
+    <link rel="stylesheet" type="text/css" href="styles/buttons.css">
+
   </head>
   <body>
-    <h3><a href="/">Urban Green</a></h3>
+    <div class="banner-container">
+      <div class="menu">
+        <div class="home"><a href="/">Urban Green</a></div>
+          <div class="navigation-links">
+            <div class="sup"><a href="/suppliers">Suppliers</a></div>
+            <div class="products"><a href="/products">Products</a></div>
+            <div class="stock"><a href="/stock">Inventory</a></div>
+          </div>
+      </div>
+    </div>
+
+
+
+
+<!--
+    <h3 class="banner"><a href="/">Urban Green</a></h3>
+    <div class="menu">
+  <div class="menu-item"><li><a href="/suppliers">Suppliers</a></li></div>
+  <div class="menu-item"><li><a href="/products">Products</a></li></div>
+  <div class="menu-item"><li><a href="/stock">Inventory</a></li></div>
+    </div>
+
+    <nav class="flex-container">
     <ul>
+      <li><a href="/suppliers">Suppliers</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/stock">Inventory</a></li>
+      </nav> -->
       <%= yield %>
-    <li><a href="/suppliers">Suppliers</a></li>
-    <li><a href="/products">Products</a></li>
-    <li><a href="/stock">Inventory</a></li>
-  </ul>
+
+  <!-- </ul> -->
   </body>
 </html>

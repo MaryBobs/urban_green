@@ -12,7 +12,6 @@ end
 
 get '/products/new' do
   @categories = Category.all()
-  @suppliers = Supplier.all()
   erb(:"products/new")
 end
 

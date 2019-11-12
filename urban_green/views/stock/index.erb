@@ -1,5 +1,7 @@
 <h1>Inventory</h1>
 
+<h2><a href='/stock/new'>Add new stock</a></h2>
+
 <table>
   <tr>
     <th>Product</th>
@@ -18,7 +20,7 @@
     </tr>
     <% for stock in @stock %>
     <tr>
-      <td><%= stock.product.name %></td>
+      <td><a href="/stock/<%= stock.id %>"><%= stock.product.name %></a></td>
       <td>|</td>
       <td> <%= stock.supplier.name %></td>
       <td>|</td>

@@ -33,13 +33,10 @@ class Product
     SqlRunner.run(sql, values)
   end
 
-  def supplier_name()
-    sql = "SELECT * FROM suppliers WHERE id = $1"
-    values = [@supplier_id]
-    results = SqlRunner.run(sql, values)
-    supplier_hash = results[0]
-    supplier = Supplier.new(supplier_hash)
-    return supplier
+  def category_name()
+    sql = "SELECT * FROM categories WHERE id = $1"
+    values = [@category_id]
+    return Category.new(SqlRunner.run(sql, values)[0])
   end
 
   def self.all()

@@ -29,6 +29,12 @@ class Supplier
     SqlRunner.run(sql,values)
   end
 
+  def delete()
+    sql = "DELETE FROM suppliers WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM suppliers"
     return SqlRunner.run(sql).map{|supplier| Supplier.new(supplier)}
@@ -38,12 +44,6 @@ class Supplier
     sql = "SELECT * FROM suppliers WHERE id = $1"
     values = [id]
     return Supplier.new(SqlRunner.run(sql, values)[0])
-  end
-
-  def self.delete(id)
-    sql = "DELETE FROM suppliers WHERE id = $1"
-    values = [id]
-    SqlRunner.run(sql, values)
   end
 
 end

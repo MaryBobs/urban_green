@@ -1,5 +1,13 @@
 <h1>Are you sure you want to delete this supplier:</h1>
+<!--
+<h2><a method="post" href="/suppliers/<%= @supplier.id %>/delete">Yes, confirm delete</a></h2>
 
-<h2><a href="/suppliers/<%= @supplier.id %>/delete">Yes, confirm delete</a></h2>
+<h2><a href="/suppliers">No, return to Supplier list</a></h2> -->
 
-<h2><a href="/suppliers">No, return to Supplier list</a></h2>
+<form action="/suppliers/<%= @supplier.id %>/delete" method="post">
+  <input type="submit" name="delete" value="Yes, delete Supplier">
+</form>
+
+<form action="/suppliers">
+  <input type="submit" name="Supplier list" value="No, return to Supplier list">
+</form>

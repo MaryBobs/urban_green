@@ -3,16 +3,25 @@
 <form action="/stock/<%= @stock.id %>" method="post">
 
   <label for="product_select">Select Product:</label>
-  <select id="product_select" name="product_id">
+  <select id="product_select" name="product_id" selected="<%= @stock.product_id %>">
     <% for product in @products %>
+    <% if product.id == @stock.product_id %>
+    <option value=<%= product.id %> selected><%= product.name %></option>
+    <% else %>
     <option value=<%= product.id %>><%= product.name %></option>
+    <% end %>
     <% end %>
   </select>
 
+
   <label for="supplier_select">Select Supplier:</label>
-  <select id="supplier_select" name="supplier_id">
+  <select id="supplier_select" name="supplier_id" selected="<%= @stock.supplier_id %>">
     <% for supplier in @suppliers %>
+    <% if supplier.id == @stock.supplier_id %>
+    <option value=<%= supplier.id %> selected><%= supplier.name %></option>
+    <% else %>
     <option value=<%= supplier.id %>><%= supplier.name %></option>
+    <% end %>
     <% end %>
   </select>
 

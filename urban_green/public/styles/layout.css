@@ -76,7 +76,7 @@ a {
 
 .inventory {
   display: flex;
-  justify-content: center;
+  justify-content: center space-around;
   padding: 20px;
 }
 

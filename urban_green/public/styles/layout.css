@@ -6,7 +6,6 @@
   font-size: 25px;
 }
 
-
 .banner-container {
   display: flex;
   justify-content: center;
@@ -65,8 +64,6 @@
   margin-left: 20px;
 }
 
-
-
 .opt-suppliers a, .opt-products a, .opt-stock a {
   text-decoration: none;
   color: #594157;
@@ -79,7 +76,7 @@ a {
 
 .inventory {
   display: flex;
-  justify-content: flex-start space-around;
+  justify-content: center space-around;
   padding: 20px;
 }
 

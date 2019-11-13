@@ -4,7 +4,7 @@
 <h2 class="button"><a href='/stock/new'>Add new stock</a></h2>
 </div>
 <div class="inventory-table">
-<table>
+<table class="filteredtable">
   <tr>
     <th>Product</th>
     <th></th>
@@ -25,7 +25,7 @@
     <th>Edit</th>
     </tr>
     <% for stock in @stock %>
-    <tr>
+    <tr class=<%=stock.product.category_name.name%>>
       <td><a href="/products/<%= stock.product_id %>"><%= stock.product.name %></a></td>
       <td>|</td>
       <td><a href="/suppliers/<%= stock.supplier_id %>"> <%= stock.supplier.name %></a></td>
@@ -54,10 +54,3 @@
 </table>
 </div>
 </div>
-
-<label for="category_select">Category:</label>
-<select class="tablefilter" id="category_select" name="category_id">
-  <% for category in @categories %>
-  <option value=<%= category.id %>><%= category.name %></option>
-  <% end %>
-</select>

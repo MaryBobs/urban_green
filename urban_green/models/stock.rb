@@ -47,8 +47,9 @@ def product()
 end
 
 def markup()
-  result = (@selling_price.to_f - @buying_cost.to_f) * 100
-  return result
+  profit = (@selling_price.to_f - @buying_cost.to_f)
+  result = (profit / @buying_cost.to_f) * 100
+  return result.round(2)
 end
 
   def self.all()

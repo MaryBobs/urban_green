@@ -1,11 +1,12 @@
 <h1 class="supplier-title">Products</h1>
+
 <div class="suppliers">
 <div class="supplier-menu">
-<h2 class="supplier-button"><a href='products/new'>Add new product</a></h2>
+<h2 class="details"><a href='products/new'>Add new product</a></h2>
 </div>
 <div class="supplier-list">
 <% for category in @categories %>
-<h2 class="details"><a href="/categories/<%= category.id %>"><%= category.name%></a></h2>
+<h2><a class="details" href="/categories/<%= category.id %>"><%= category.name%></a></h2>
 <% end %>
 </div>
 </div>

@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="../../styles/layout.css">
+<h1>Are you sure you want to delete this supplier:</h1>
+<br>
+<br>
+<div class="delete">
+<form class="details" action="/stock/<%= @stock.id %>/delete" method="post">
+  <input type="submit" name="delete" value="Yes, delete this Stock item">
+</form>
+<br>
+<br>
+<form action="/stock">
+  <input class="details" type="submit" name="Inventory" value="No, return to Inventory">
+</form>
+</div>

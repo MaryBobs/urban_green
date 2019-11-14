@@ -1,19 +1,25 @@
 <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-<h2>Add new Product</h2>
-
+<h2 class="supplier-title">Add new Product</h2>
+<br>
+<br>
+<div class="supplierfm">
 <form action="/products" method="post">
   <label for="name">Product Name</label>
   <input type="text" name="name" id="name">
-
+<br>
+<br>
   <label for="description">Product Details</label>
   <input type="text" name="description" id="description">
-
+<br>
+<br>
   <label for="category_select">Select Category:</label>
   <select id="category_select" name="category_id">
     <% for category in @categories %>
     <option value=<%= category.id %>><%= category.name %></option>
     <% end %>
   </select>
-
-  <input type="submit" name="Save New Product">
+<br>
+<br>
+  <input class ="details" type="submit" name="Save New Product">
 </form>
+</div>

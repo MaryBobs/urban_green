@@ -46,6 +46,12 @@ def product()
   return product
 end
 
+def delete()
+  sql = "DELETE FROM stock WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end
+
 def markup()
   profit = (@selling_price.to_f - @buying_cost.to_f)
   result = (profit / @buying_cost.to_f) * 100

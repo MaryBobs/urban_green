@@ -1,12 +1,16 @@
 <link rel="stylesheet" type="text/css" href="../../styles/layout.css">
-<h2>Update Product Details</h2>
+<h2 class="supplier-title">Update Product Details</h2>
 <br>
+<br>
+<div>
 <form action="/products/<%= @product.id %>" method="post">
   <label for="name">Product Name:</label>
   <input type="text" name="name" id="name" value="<%= @product.name %>">
 <br>
+<br>
   <label for="description">Description:</label>
   <input type="text" name="description" id="description" value="<%= @product.description %>">
+<br>
 <br>
   <label for="category_select">Select Category:</label>
   <select id="category_select" name="category_id" selected="<%= @product.category_id %>">
@@ -15,5 +19,7 @@
     <% end %>
   </select>
 <br>
-  <input type="submit" name="Update Product" value="Update Product">
+<br>
+  <input class="details" type="submit" name="Update Product" value="Update Product">
 </form>
+</div>

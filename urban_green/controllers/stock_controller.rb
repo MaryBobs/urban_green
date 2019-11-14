@@ -25,6 +25,11 @@ get '/stock/:id/edit' do
   erb(:"stock/edit")
 end
 
+get '/stock/:id/delete' do
+  @stock = Stock.find_by_id(params['id'])
+  erb(:"stock/delete")
+end
+
 post '/stock' do
   Stock.new(params).save
   redirect to '/stock'
@@ -33,4 +38,9 @@ end
 post '/stock/:id' do
   Stock.new(params).update
   redirect to "/stock"
+end
+
+post '/stock/:id/delete' do
+  Stock.find_by_id(params['id']).delete
+  redirect to '/stock'
 end

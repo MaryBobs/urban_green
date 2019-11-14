@@ -1,8 +1,11 @@
-<h1>Product Details</h1>
-
-<h2><%= @product.name %></h2>
-<h2><%= @product.description %></h2>
-<h2><%= @product.category_name.name %></h2>
-
-<h2><a href="/products/<%= @product.id %>/edit">Edit Product Details</a></h2>
-<h2><a href="/products/<%= @product.id %>/delete">Delete Product</h2>
+<link rel="stylesheet" type="text/css" href="../styles/layout.css">
+<h1>Product Details  </h1>
+<br>
+<h2>Product name:  <%= @product.name %></h2>
+<br>
+<h2>Description:  <%= @product.description %></h2>
+<br>
+<h2>Category:  <%= @product.category_name.name %></h2>
+<br>
+<h2 class="details"><a href="/products/<%= @product.id %>/edit">Edit Product Details</a></h2>
+<h2 class="details"><a href="/products/<%= @product.id %>/delete">Delete Product</h2>

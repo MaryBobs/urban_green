@@ -1,17 +1,25 @@
-<h2>Update Supplier Details</h2>
-
+<link rel="stylesheet" type="text/css" href="../../styles/layout.css">
+<h2 class="supplier-title">Update Supplier Details</h2>
+<br>
+<br>
+<div>
 <form action="/suppliers/<%= @supplier.id %>" method="post">
   <label for="name">Supplier Name</label>
   <input type="text" name="name" id="name" value="<%= @supplier.name %>">
-
+  <br>
+  <br>
   <label for="contact_name">Contact Person</label>
   <input type="text" name="contact_name" id="contact_name" value="<%= @supplier.contact_name %>">
-
+  <br>
+  <br>
   <label for="email">Email</label>
   <input type="text" name="email" id="email" value="<%= @supplier.email %>">
-
+  <br>
+  <br>
   <label for="phone_number">Phone Number</label>
   <input type="text" name="phone_number" id="phone_number" value="<%= @supplier.phone_number %>">
-
-  <input type="submit" name="Update Supplier" value="Update Supplier">
+  <br>
+  <br>
+  <input class="details" type="submit" name="Update Supplier" value="Update Supplier">
 </form>
+</div>

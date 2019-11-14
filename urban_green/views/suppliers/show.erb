@@ -1,9 +1,11 @@
+<link rel="stylesheet" type="text/css" href="../styles/layout.css">
 <h1>Supplier Information</h1>
-
-<h2><%= @supplier.name %></h2>
-<h2><%= @supplier.contact_name %></h2>
-<h2><%= @supplier.email %></h2>
-<h2><%= @supplier.phone_number %></h2>
-
+<br>
+<h2 class="details"><%= @supplier.name %></h2>
+<h2>Contact Person:  <%= @supplier.contact_name %></h2>
+<h2>Email:  <%= @supplier.email %></h2>
+<h2>Phone Number:  <%= @supplier.phone_number %></h2>
+<br>
+<br>
 <h2><a href="/suppliers/<%= @supplier.id %>/edit">Edit Supplier Information</a></h2>
 <h2><a href="/suppliers/<%= @supplier.id %>/delete">Delete Supplier</h2>

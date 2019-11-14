@@ -20,7 +20,7 @@ CREATE TABLE products (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   description TEXT,
-  category_id INT8 REFERENCES categories(id)
+  category_id INT4 REFERENCES categories(id)
 );
 
 CREATE TABLE stock (

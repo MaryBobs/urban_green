@@ -25,7 +25,6 @@ get '/stock/:id/edit' do
   erb(:"stock/edit")
 end
 
-
 post '/stock' do
   Stock.new(params).save
   redirect to '/stock'

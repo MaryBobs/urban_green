@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="../styles/layout.css">
+
+<h2 class="details"><%= @categories.name %></h2>
+
+<div>
+<% for product in @products %>
+<% if product.category_id == @categories.id %>
+<h2><a href="/products/<%= product.id %>"><%= product.name %></a></h2>
+<% end %>
+<% end %>
+</div>

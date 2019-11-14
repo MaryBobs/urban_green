@@ -35,16 +35,16 @@ product1 = Product.new(
 product2 = Product.new(
   {"name" => "Tinned tomatoes", "description" => "chopped tomatoes", "category_id" => 1})
 
-product2 = Product.new(
+product3 = Product.new(
   {"name" => "Milk", "description" => "2 pints", "category_id" => 2})
 
-product1 = Product.new(
+product4 = Product.new(
   {"name" => "Pizza", "description" => "Frozen cheese pizza", "category_id" => 3})
 
-product2 = Product.new(
+product5 = Product.new(
   {"name" => "Apples", "description" => "5 per bag", "category_id" => 2})
 
-product2 = Product.new(
+product6 = Product.new(
   {"name" => "Birthday cards", "description" => "pack of 3", "category_id" => 4})
 
 product1.save()

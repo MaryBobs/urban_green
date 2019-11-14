@@ -1,9 +1,14 @@
+<link rel="stylesheet" type="text/css" href="../../styles/layout.css">
 <h1>Are you sure you want to delete this supplier:</h1>
-
-<form action="/suppliers/<%= @supplier.id %>/delete" method="post">
+<br>
+<br>
+<div class="delete">
+<form class="details" action="/suppliers/<%= @supplier.id %>/delete" method="post">
   <input type="submit" name="delete" value="Yes, delete Supplier">
 </form>
-
+<br>
+<br>
 <form action="/suppliers">
-  <input type="submit" name="Supplier list" value="No, return to Supplier list">
+  <input class="details" type="submit" name="Supplier list" value="No, return to Supplier list">
 </form>
+</div>

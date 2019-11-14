@@ -1,5 +1,6 @@
 require_relative("../db/sql_runner.rb")
 
+
 class Category
 
   attr_reader :id
@@ -24,6 +25,12 @@ class Category
     sql = "UPDATE categories SET name = $1 WHERE id = $2;"
     values = [@name, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def products()
+    sql = "SELECT * FROM products WHERE id = $1"
+    values = [@id]
+    return SqlRunner.run(sql, values).map{|product| Product.new(product)}
   end
 
   def self.all()

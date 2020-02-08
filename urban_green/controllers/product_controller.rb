@@ -1,9 +1,8 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative("../models/product.rb")
 require_relative("../models/supplier.rb")
 require_relative("../models/category.rb")
-also_reload("../models/*")
 
 get '/products' do
   @products = Product.all()

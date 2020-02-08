@@ -50,5 +50,5 @@ stock2.save()
 
 all_stock = Stock.all()
 
-binding.pry
+
 nil

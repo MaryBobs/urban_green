@@ -1,6 +1,6 @@
 # Urban Green - Shop Inventory System
 
-This was my first solo project for the CodeClan Professional Software Development course. I built a web application that allows a shopkeeper to keep track of their stock. They can add, delete and edit stock and suppliers, display their inventory and see stock levels and the markup for each product.
+This was my first solo project for the CodeClan Professional Software Development course. I built a web application using Ruby, Sinatra and PSQL, that allows a shopkeeper to keep track of their stock. They can add, delete and edit stock and suppliers, display their inventory and see stock levels and the markup for each product.
 
 I have uploaded the app to Heroku so you can view it here:
 https://urbangreen.herokuapp.com/stock
